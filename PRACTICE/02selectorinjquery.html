@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector In Jquery</title>
+</head>
+
+<body>
+    <h1>Selector In Jquery</h1>
+    <p>Universal Selector</p>
+    <p>Element Selector</p>
+    <button class="btnclass">Class button</button>
+    <button id="btnid">Id button</button>
+
+
+    <!-- //jquery file ... -->
+    
+    <!-- <script src="../jquery/IMAGE/jquery-3.7.1.mindownloadfile.js"></script> -->
+
+
+    <!-- jquery cdn file...... -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //Universal selector
+            $('*').click(function () {
+                console.log('Universal Selector')
+            })
+
+            //element selector
+            $('p').click(function () {
+                console.log('element selector')
+            })
+
+            //class selector
+
+            $('.btnclass').click(function () {
+                console.log('class selector')
+            })
+
+            //id selector
+            $('#btnid').click(function () {
+                console.log('id selector')
+            })
+        })
+    </script>
+</body>
+
+</html>
