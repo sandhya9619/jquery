@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hide Remove & Toggle in jQuery</title>
+  <style>
+    *{
+      /* margin: 0 auto; */
+      text-align: center;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hide Remove & Toggle in jQuery</h1>
+  <p>click hide button and hide p element. click show button and see this p element. and click toggle button and one by
+    one hide and show this p element</p>
+  <button class="Hide">Hide </button>
+  <button class="Show">Show </button>
+  <button class="Toggle">Toggle </button>
+
+  <!-- jquery cdn link is here............... -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+    $(document).ready(function () {
+      // Hide
+      $(".Hide").click(function () {
+        $("p").hide();
+        console.log("P element is Hide");
+      });
+      // Show
+      $(".Show").click(function () {
+        $("p").show();
+        console.log("P element is show");
+      });
+      // Toggle
+      $(".Toggle").click(function () {
+        $("p").toggle();
+        console.log("P element is Toggle");
+      });
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>
