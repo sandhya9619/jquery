@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade in,fade out,fade to,fade togge in jquery</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        /* img{
+        height: 500px;
+        width: 70%;
+        border: 2px solid black;
+        margin-top: 20px;
+    } */
+        .magic {
+            height: 200px;
+            width: 200px;
+            background-color: yellowgreen;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>fades in jquery</h1>
+
+    <button class="slide-up">slide up</button>
+    <button class="slide-down">slide down</button>
+    <button class="slide-toggle">slide toggle</button>
+
+    <div class="magic">
+        <!-- <img src="../IMAGE/01image.jpg" alt=""> -->
+    </div>
+    <!-- jquery cdn link is here............... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $(".slide-up").click(function () {
+                $('.magic').slideUp(2000)
+            });
+            $(".slide-down").click(function () {
+                $('.magic').slideDown(2000)
+            });
+            $('.slide-toggle').click(function () {
+                $('.magic').slideToggle(3000)
+            });
+          
+        })
+    </script>
+
+
+</body>
+
+</html>

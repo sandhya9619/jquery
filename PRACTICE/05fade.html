@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade in,fade out,fade to,fade togge in jquery</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        /* img{
+        height: 500px;
+        width: 70%;
+        border: 2px solid black;
+        margin-top: 20px;
+    } */
+        .magic {
+            height: 200px;
+            width: 200px;
+            background-color: yellowgreen;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>fades in jquery</h1>
+
+    <button class="fade-in">fade in</button>
+    <button class="fade-out">fade out</button>
+    <button class="fade-to">fade to</button>
+    <button class="fade-toggle">fade toggle</button>
+
+    <div class="magic">
+        <!-- <img src="../IMAGE/01image.jpg" alt=""> -->
+    </div>
+    <!-- jquery cdn link is here............... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $(".fade-in").click(function () {
+                $('.magic').fadeIn(3000)
+            });
+            $(".fade-out").click(function () {
+                $('.magic').fadeOut(2000)
+            });
+            $('.fade-toggle').click(function () {
+                $('.magic').fadeToggle(3000)
+            });
+            $('.fade-to').click(function () {
+                $('.magic').fadeTo(2000, 0.25)
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>
