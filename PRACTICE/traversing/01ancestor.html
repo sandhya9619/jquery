@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ancestors in jquery</title>
+    <style>
+        * {
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    body
+    <div class="great-grand-parent">
+        great-grand-parent
+        <div class="grand-parent">
+            grand-parent
+            <div class="parent">
+                parent
+                <div class="child">child-1</div>
+                <div class="child">child-2</div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery cdn link is here............... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+    <script>
+        console.log($);
+
+
+        $(document).ready(function () {
+
+            // Parent 
+
+            $('.child').parent().css({ border: '3px solid purple' })
+            $('.parent').parent().css({ border: '3px solid purple' })
+            $('.grand-parent').parent().css({ border: '3px solid purple' })
+            $('.great-grand-parent').parent().css({ border: '3px solid purple' })
+
+
+            // parents 
+
+            $('.child').parents().css({ border: '3px solid blue' })
+            $('.parent').parents().css({ border: '3px solid blue' })
+            $('.grand-parent').parents().css({ border: '3px solid blue' })
+
+
+
+            // ParentsUntil
+
+            $('.child').parentsUntil('.grand-parent').css({ border: '3px solid black' })
+
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Descendants Traversing</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    body
+    <div class="great-grand-parent">
+      great-grand-parent
+      <div class="grand-parent">
+        grand-parent
+        <div class="parent">
+          parent
+          <div class="child">child-1</div>
+          <div class="child">child-2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery  -->
+
+    <!-- <script src="../js/jquery-3.7.1.min.js"></script> -->
+
+     <!-- jquery cdn link is here............... -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+      console.log($);
+
+
+      $(document).ready(function () {
+
+        // Children 
+
+        // $('html').children().css({border: '3px solid blue'})
+        // $('body').children().css({border: '3px solid blue'})
+        // $('.great-grand-parent').children().css({border: '3px solid blue'})
+        // $('.grand-parent').children().css({border: '3px solid red'})
+        // $('.parent').children().css({border: '3px solid green'})
+       
+
+
+        // find 
+
+        $('.great-grand-parent').find('.parent').css({border: '3px solid blue'})
+        $('.great-grand-parent').find('.child').css({border: '3px solid red'})
+        $('.great-grand-parent').find('.grand-parent').css({border: '3px solid green'})
+        
+
+
+
+
+
+
+      });
+    </script>
+  </body>
+</html>
